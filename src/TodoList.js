@@ -10,8 +10,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 const TodoList = ({ todos, deleteTodo }) => (
   <List>
     {todos.map((todo, index) => (
-      <ListItem key={index.toString()} dense button>
-        <Checkbox tabIndex={-1} disableRipple />
+      <ListItem key={index.toString()} dense button divider={true} selected={index%3===0}>
+        <Checkbox tabIndex={-1} disableRipple color='secondary'/>
         <ListItemText primary={todo} />
         <ListItemSecondaryAction>
           <IconButton
